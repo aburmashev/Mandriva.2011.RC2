@@ -86,10 +86,9 @@ echo
 echo
 
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+export BUILD_TARGET_ARCH=amd64
 if x86_64=i586; then
 export BUILD_TARGET_ARCH=x86
-else
-export BUILD_TARGET_ARCH=amd64
 fi 
 
 echo " ###DKMS BUILD### "                                                                                                                                                                                          
@@ -130,6 +129,7 @@ echo ""
 
     cp -rfT 	/opt//Mandriva.2011.RC2/extraconfig/etc $INSTALL_ROOT/etc/
     cp -rfT     /opt//Mandriva.2011.RC2/extraconfig/etc/skel $INSTALL_ROOT/home/live/
+    chown -R live:live $INSTALL_ROOT/home/live/
     cp -rfT     /opt//Mandriva.2011.RC2/.counter $INSTALL_ROOT/etc/isonumber 
 
     cp -f 		/opt//Mandriva.2011.RC2/root/GPL $LIVE_ROOT/

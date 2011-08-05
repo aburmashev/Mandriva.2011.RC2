@@ -128,8 +128,8 @@ echo ""
 %post --nochroot
 
     cp -rfT 	#PATH#/extraconfig/etc $INSTALL_ROOT/etc/
-    cp -rfT     #PATH#/extraconfig/etc/skel $INSTALL_ROOT/home/live/
-    chown -R live:live /home/live $INSTALL_ROOT/home/live/
+#    cp -rfT     #PATH#/extraconfig/etc/skel $INSTALL_ROOT/home/live/
+#    chown -R live:live $INSTALL_ROOT/home/live/
     cp -rfT     #PATH#/.counter $INSTALL_ROOT/etc/isonumber 
 
     cp -f 		#PATH#/root/GPL $LIVE_ROOT/
