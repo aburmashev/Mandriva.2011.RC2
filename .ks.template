@@ -86,10 +86,9 @@ echo
 echo
 
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+export BUILD_TARGET_ARCH=amd64
 if #ARCH#=i586; then
 export BUILD_TARGET_ARCH=x86
-else
-export BUILD_TARGET_ARCH=amd64
 fi 
 
 echo " ###DKMS BUILD### "                                                                                                                                                                                          
