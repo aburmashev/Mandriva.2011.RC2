@@ -1412,3 +1412,4 @@ libstdc++6
 #dkms-r8192se
 #rtl8192se-firmware
 psyncclient-devel
+bind-utils

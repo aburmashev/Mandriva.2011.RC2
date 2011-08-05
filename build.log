@@ -8733,3 +8733,224 @@ Building module:
 cleaning build area....
 make KERNELRELEASE=2.6.38.7-desktop-1mnb2 -C /lib/modules/2.6.38.7-desktop-1mnb2/build M=/var/lib/dkms/vboxadditions/4.0.8-2/build/vboxguest && cp /var/lib/dkms/vboxadditions/4.0.8-2/build/vboxguest/Module.symvers /var/lib/dkms/vboxadditions/4.0.8-2/build/vboxsf && make -C /lib/modules/2.6.38.7-desktop-1mnb2/build M=/var/lib/dkms/vboxadditions/4.0.8-2/build/vboxsf && cp /var/lib/dkms/vboxadditions/4.0.8-2/build/vboxsf/Module.symvers /var/lib/dkms/vboxadditions/4.0.8-2/build/vboxvideo && make -C /lib/modules/2.6.38.7-desktop-1mnb2/build M=/var/lib/dkms/vboxadditions/4.0.8-2/build/vboxvideo.....(bad exit status: 2)
 END OF IT
+LESSKEY=/etc/.less
+CANBERRA_DRIVER=pulse
+LC_SOURCED=1
+TMPDIR=/tmp/
+BUILD_TARGET_ARCH=x86
+QTDIR=/usr/lib/qt4
+QT4DOCDIR=/usr/share/doc/qt4/doc
+LS_COLORS=
+ENV=/.bashrc
+USERNAME=root
+PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/lib/qt4/bin
+INPUTRC=/etc/inputrc
+PWD=/
+PYTHONSTARTUP=/etc/pythonrc.py
+PYTHONDONTWRITEBYTECODE=1
+HISTCONTROL=ignoredups
+SSH_ASKPASS=/usr/lib64/ssh/ssh-askpass
+LESSCHARSET=koi8-r
+SHLVL=2
+GCONF_TMPDIR=/tmp
+PYTHONPATH=/usr/lib64/ooo/basis-link/program
+G_FILENAME_ENCODING=@locale
+TMP=/tmp/
+LESS=-MM
+LESSOPEN=|/usr/bin/lesspipe.sh %s
+META_CLASS=download
+MDV_MENU_STYLE=mandriva
+_=/usr/bin/printenv
+LESSKEY=/etc/.less
+CANBERRA_DRIVER=pulse
+LC_SOURCED=1
+TMPDIR=/tmp/
+BUILD_TARGET_ARCH=amd64
+QTDIR=/usr/lib/qt4
+QT4DOCDIR=/usr/share/doc/qt4/doc
+LS_COLORS=
+ENV=/.bashrc
+USERNAME=root
+PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/lib/qt4/bin
+INPUTRC=/etc/inputrc
+PWD=/
+PYTHONSTARTUP=/etc/pythonrc.py
+PYTHONDONTWRITEBYTECODE=1
+HISTCONTROL=ignoredups
+SSH_ASKPASS=/usr/lib64/ssh/ssh-askpass
+LESSCHARSET=koi8-r
+SHLVL=2
+GCONF_TMPDIR=/tmp
+PYTHONPATH=/usr/lib64/ooo/basis-link/program
+G_FILENAME_ENCODING=@locale
+TMP=/tmp/
+LESS=-MM
+LESSOPEN=|/usr/bin/lesspipe.sh %s
+META_CLASS=download
+MDV_MENU_STYLE=mandriva
+_=/usr/bin/printenv
+2.6.38.7-desktop-1mnb2
+
+Preparing kernel 2.6.38.7-desktop-1mnb2 for module build:
+(This is not compiling a kernel, just preparing kernel symbols)
+Storing current .config to be restored when complete
+Running Generic preparation routine
+make mrproper....
+using /boot/config-2.6.38.7-desktop-1mnb2
+make oldconfig.....
+make prepare....
+
+Building module:
+cleaning build area....
+make KERNELRELEASE=2.6.38.7-desktop-1mnb2 -C /lib/modules/2.6.38.7-desktop-1mnb2/build M=/var/lib/dkms/vboxadditions/4.0.8-2/build/vboxguest && cp /var/lib/dkms/vboxadditions/4.0.8-2/build/vboxguest/Module.symvers /var/lib/dkms/vboxadditions/4.0.8-2/build/vboxsf && make -C /lib/modules/2.6.38.7-desktop-1mnb2/build M=/var/lib/dkms/vboxadditions/4.0.8-2/build/vboxsf && cp /var/lib/dkms/vboxadditions/4.0.8-2/build/vboxsf/Module.symvers /var/lib/dkms/vboxadditions/4.0.8-2/build/vboxvideo && make -C /lib/modules/2.6.38.7-desktop-1mnb2/build M=/var/lib/dkms/vboxadditions/4.0.8-2/build/vboxvideo..............
+cleaning build area....
+cleaning kernel tree (make mrproper)....
+
+DKMS: build Completed.
+
+vboxguest.ko.gz:
+ - Installation
+   - Installing to /lib/modules/2.6.38.7-desktop-1mnb2/dkms/3rdparty/vbox/
+
+vboxsf.ko.gz:
+ - Installation
+   - Installing to /lib/modules/2.6.38.7-desktop-1mnb2/dkms/3rdparty/vbox/
+
+vboxvideo.ko.gz:
+ - Installation
+   - Installing to /lib/modules/2.6.38.7-desktop-1mnb2/dkms/3rdparty/vbox/
+
+depmod....
+
+DKMS: install Completed.
+/lib/modules /
+/
+
+Generating kernel. System kernel is 2.6.27.56-desktop-2mnb, installed kernels are:
+kernel-firmware-20110314-2-mdv2011.0.noarch
+kernel-desktop-2.6.38.7-1mnb2-1-1-mdv2011.0.x86_64
+kernel-desktop-devel-2.6.38.7-1mnb2-1-1-mdv2011.0.x86_64
+kernel-firmware-extra-20110428-1-mdv2011.0.noarch
+kernel-desktop-latest-2.6.38.7-1-mdv2011.0.x86_64
+kernel-desktop-devel-latest-2.6.38.7-1-mdv2011.0.x86_64
+Detected kernel version: 2.6.38.7-desktop-1mnb2
+total 35916
+-rw-r--r-- 1 root root  2064301 May 22 16:56 System.map-2.6.38.7-desktop-1mnb2
+-rw-r--r-- 1 root root   121494 May 22 16:56 config-2.6.38.7-desktop-1mnb2
+drwxr-xr-x 2 root root     4096 Jun 28 07:10 dracut
+drwxr-xr-x 2 root root     4096 Aug  5 05:07 grub
+-rw-r--r-- 1 root root 30981638 Aug  5 05:31 initramfs-2.6.38.7-desktop-1mnb2.img
+-rw-r--r-- 1 root root   201690 May 22 16:56 symvers-2.6.38.7-desktop-1mnb2.gz
+-rw-r--r-- 1 root root  3340144 May 22 16:56 vmlinuz-2.6.38.7-desktop-1mnb2
+lrwxrwxrwx 1 root root       30 Aug  5 04:44 vmlinuz-desktop -> vmlinuz-2.6.38.7-desktop-1mnb2
+
+###################################### Build ISO >> 
+
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+Mandriva.2011.RC: 215911/557056 files (0.5% non-contiguous), 1527944/2225152 blocks
+Resizing the filesystem on /var/tmp/imgcreate-1DUi75/tmp-3T1foH/ext3fs.img to 1516605 (4k) blocks.
+The filesystem on /var/tmp/imgcreate-1DUi75/tmp-3T1foH/ext3fs.img is now 1516605 blocks long.
+
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+Mandriva.2011.RC: 215911/385024 files (0.6% non-contiguous), 1516605/1516605 blocks
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+Mandriva.2011.RC: 215911/385024 files (0.6% non-contiguous), 1516605/1516605 blocks
+Resizing the filesystem on /var/tmp/imgcreate-1DUi75/tmp-3T1foH/ext3fs.img to 2225152 (4k) blocks.
+The filesystem on /var/tmp/imgcreate-1DUi75/tmp-3T1foH/ext3fs.img is now 2225152 blocks long.
+
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+Mandriva.2011.RC: 215911/557056 files (0.6% non-contiguous), 1527944/2225152 blocks
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+Mandriva.2011.RC: 215911/557056 files (0.6% non-contiguous), 1527944/2225152 blocks
+Resizing the filesystem on /dev/mapper/imgcreate-31970-29225 to 1516605 (4k) blocks.
+The filesystem on /dev/mapper/imgcreate-31970-29225 is now 1516605 blocks long.
+
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+Mandriva.2011.RC: 215911/385024 files (0.6% non-contiguous), 1516605/1516605 blocks
+Parallel mksquashfs: Using 8 processors
+Creating 4.0 filesystem on /var/tmp/imgcreate-1DUi75/iso-AYDVRN/LiveOS/osmin.img, block size 131072.
+
+Exportable Squashfs 4.0 filesystem, xz compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 12.68 Kbytes (0.01 Mbytes)
+	0.48% of uncompressed filesystem size (2640.30 Kbytes)
+Inode table size 134 bytes (0.13 Kbytes)
+	89.33% of uncompressed inode table size (150 bytes)
+Directory table size 27 bytes (0.03 Kbytes)
+	100.00% of uncompressed directory table size (27 bytes)
+Number of duplicate files found 0
+Number of inodes 2
+Number of files 1
+Number of fragments 0
+Number of symbolic links  0
+Number of device nodes 0
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 1
+Number of ids (unique uids + gids) 1
+Number of uids 1
+	root (0)
+Number of gids 1
+	root (0)
+Parallel mksquashfs: Using 8 processors
+Creating 4.0 filesystem on /var/tmp/imgcreate-1DUi75/iso-AYDVRN/LiveOS/squashfs.img, block size 131072.
+
+Exportable Squashfs 4.0 filesystem, xz compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 1674777.44 Kbytes (1635.52 Mbytes)
+	18.82% of uncompressed filesystem size (8900880.00 Kbytes)
+Inode table size 94756 bytes (92.54 Kbytes)
+	34.04% of uncompressed inode table size (278332 bytes)
+Directory table size 58 bytes (0.06 Kbytes)
+	100.00% of uncompressed directory table size (58 bytes)
+Number of duplicate files found 0
+Number of inodes 3
+Number of files 1
+Number of fragments 0
+Number of symbolic links  0
+Number of device nodes 0
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 2
+Number of ids (unique uids + gids) 1
+Number of uids 1
+	root (0)
+Number of gids 1
+	root (0)
+Inserting md5sum into iso image...
+md5 = e66fa7387b0f6f00c984348357a0557a
+Inserting fragment md5sums into iso image...
+fragmd5 = 5c9215ba528597577e51881fe1e3d54b2a4aec1116ab3ac9a76779961368
+frags = 20
+Setting supported flag to 0
+/var/tmp/imgcreate-1DUi75/urpmi_conf
+++++++++++++++++++++++++ ['2.6.38.7-desktop-1mnb2']
+
+          ALL DONE!        /opt//iso/Mandriva.2011.RC2/Mandriva.2011.RC2.x86_64.24.iso
+
