@@ -1,0 +1,67 @@
+#!/bin/sh
+
+ARCHS="i586 x86_64"
+
+if [ ! "$UID" = "0" ]; then
+	echo "Restarting as root.."
+	exec sudo $0 $*
+fi
+
+IMAGE=${1:-kde}
+DIRNAME=$(dirname $0)
+cd $DIRNAME
+
+if [ ! -f "$IMAGE.lst" ]; then
+	echo Usage: $0 [image]
+	echo by default 'kde' image is built
+	echo
+	echo Unable to find image "$IMAGE.lst"
+	exit 1
+fi
+
+echo "Building $IMAGE image"
+
+build_root="/home/LIVE/"
+
+d=`date +%Y.%m.%d-%H.%M`
+
+product_id="Mandriva.2011"
+product_name_file="${build_root}/${product_id}/.name.txt" ; touch ${product_name_file}
+
+#ks="${build_root}/${product_id}/.ks"
+
+ks="${build_root}/${product_id}/.ks"
+counter="${build_root}/${product_id}/.counter"
+menu="${build_root}/${product_id}/.menu.xml"
+
+touch ${counter}
+
+i=`cat ${counter}`
+i=`expr $i + 1`
+
+echo $i > ${counter}
+
+echo "$i.$d" > ${build_root}/${product_id}/version.txt
+
+# build different architectures
+
+for arch in $ARCHS; do
+	cp -f ${ks}.template ${ks}
+	sed -i -e "s:#ARCH#:$arch:g" ${ks}
+	sed -i -e "s:#IMAGE#:$IMAGE:g" ${ks}
+	sed -i -e "s:#PATH#:${build_root}/${product_id}:g" ${ks}
+	sed -i -e "s:#PATH#:${build_root}/${product_id}:g" ${menu}
+
+	mkdir -p $build_root/iso/${product_id}/
+	# run with lower priority
+	time nice -20 livecd-creator -d -v --config=${ks} --fslabel=${product_id}.$arch.$i --menu-config=${build_root}/${product_id}/.menu.xml -t `pwd`/tmp/
+
+	mv "${product_id}.$arch.$i.iso" "$build_root/iso/${product_id}/${product_id}.$IMAGE.$arch.$HOSTNAME-$i.$d.iso"
+	isohybrid "$build_root/iso/${product_id}/${product_id}.$IMAGE.$arch.$HOSTNAME-$i.$d.iso"
+	md5sum "$build_root/iso/${product_id}/${product_id}.$IMAGE.$arch.$HOSTNAME-$i.$d.iso"  > "$build_root/iso/${product_id}/${product_id}.$IMAGE.$arch.$HOSTNAME-$i.$d.iso.md5sum"
+
+	echo ""
+	echo "          ALL DONE!        $build_root/iso/${product_id}/${product_id}.$i.iso"
+	echo ""
+
+done

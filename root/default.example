@@ -1,0 +1,30 @@
+timeout 500
+prompt 0
+
+default vesamenu.c32
+allowoptions 0
+font cyra8x16.psf
+ontimout local
+
+menu title Install Linux XP
+menu background default.jpg
+
+menu tabmsg Press [TAB] for kernel options
+menu color border 0 #ffffffff #00000000
+menu color sel 7 #ffffffff #ff000000
+menu color title 0 #ffffffff #00000000
+menu color tabmsg 0 #ffffffff #00000000
+menu color unsel 0 #ffffffff #00000000
+menu color hotsel 0 #ff000000 #ffffffff
+menu color hotkey 7 #ffffffff #ff000000
+menu color timeout_msg 0 #ffffffff #00000000
+menu color timeout 0 #ffffffff #00000000
+menu color cmdline 0 #ffffffff #00000000
+
+label local
+menu label Booting from HDD
+localboot 0
+
+label lxpd Linux-XP
+	kernel lxpd/vmlinuz
+	append initrd=initrd-net-2.6.27.21-170.2.56.1.lxpd.img vga=791 ramdisk=32768 netstart root=http://myhost.com/iso/LXPD.2008.SR1.{XXX}.{YYY}.iso rootfstype=ext2 liveimg vga=788 rhgb quiet desktop CDLABEL=LXP nopat

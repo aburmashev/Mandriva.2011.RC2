@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<menu_config>
+    <welcome_message>
+        Welcome to
+    </welcome_message>
+    <product_name>
+	Mandriva 2011 RC2
+    </product_name>
+  <item name="Launch system">
+    vga=788
+    desktop
+    nopat
+    rd_NO_LUKS
+    rd_NO_MD
+    noiswmd
+    splash=silent
+  </item>
+  <item name="Install system">
+    vga=788
+    desktop
+    nopat
+    rd_NO_LUKS
+    rd_NO_MD
+    noiswmd
+    splash=silent
+    install
+  </item>
+  <background_img_path>
+	/opt/Mandriva.2011.RC2/welcome.jpg
+  </background_img_path>
+  <font_path>
+    /opt/Mandriva.2011.RC2/cyra8x16.psf
+  </font_path>
+</menu_config>

@@ -1,0 +1,6 @@
+[ScreenSaver]
+Lock=false
+LockGrace=60000
+PlasmaEnabled=false
+Timeout=1800
+

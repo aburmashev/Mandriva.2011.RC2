@@ -1,0 +1,11 @@
+FINISH_INSTALL=yes
+authentication=no
+network=no
+timezone=no
+country=no
+users=no
+urpmi=no
+TIMEZONE=simplified
+COUNTRY=simplified
+USERS=with_root
+remove_unused_packages=no
