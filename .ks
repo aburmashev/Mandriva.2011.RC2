@@ -16,6 +16,9 @@ repo --name=Main2       --baseurl=file:///iso/repository/rpm/external/mdv/2011/i
 repo --name=Contrib2       --baseurl=file:///iso/repository/rpm/external/mdv/2011/i586/media/contrib/release/                                                                                                     
 repo --name=Non-free2        --baseurl=file:///iso/repository/rpm/external/mdv/2011/i586/media/non-free/release/
 
+##FOR KERNEL3.0
+#repo --name=Kernel-test --baseurl=file:////iso/repository/rpm/external/kernel-3.0/x86_64/
+
 %packages
 %include /opt//Mandriva.2011.RC2/kde.lst
 %end
@@ -54,6 +57,8 @@ fi
 /usr/sbin/update-ldetect-lst
 
 # setting up network manager by default
+# don't forget to change it
+
 pushd /etc/sysconfig/network-scripts
 for iface in eth0 wlan0; do
 	cat > ifcfg-$iface << EOF
@@ -128,8 +133,8 @@ echo ""
 %post --nochroot
 
     cp -rfT 	/opt//Mandriva.2011.RC2/extraconfig/etc $INSTALL_ROOT/etc/
-    cp -rfT     /opt//Mandriva.2011.RC2/extraconfig/etc/skel $INSTALL_ROOT/home/live/
-    chown -R live:live $INSTALL_ROOT/home/live/
+#    cp -rfT     /opt//Mandriva.2011.RC2/extraconfig/etc/skel $INSTALL_ROOT/home/live/
+#    chown -R live:live $INSTALL_ROOT/home/live/
     cp -rfT     /opt//Mandriva.2011.RC2/.counter $INSTALL_ROOT/etc/isonumber 
 
     cp -f 		/opt//Mandriva.2011.RC2/root/GPL $LIVE_ROOT/

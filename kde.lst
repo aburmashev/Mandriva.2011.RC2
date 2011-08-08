@@ -1391,7 +1391,7 @@ btrfs-progs
 #nilfs-utils                                                                                                                                                                                                       
 x11-driver-video-vboxvideo                                                                                                                                                                                         
 x11-driver-input-vmmouse                                                                                                                                                                                           
-vboxadditions-kernel-desktop-latest                                                                                                                                                                                
+#vboxadditions-kernel-desktop-latest                                                                                                                                                                                
 virtualbox-guest-additions                                                                                                                                                                                         
 whois                                                                                                                                                                                                              
 cups                                                                                                                                                                                                               
@@ -1413,3 +1413,4 @@ libstdc++6
 #rtl8192se-firmware
 psyncclient-devel
 bind-utils
+aumix
