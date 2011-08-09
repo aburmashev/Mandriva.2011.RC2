@@ -91,9 +91,13 @@ echo
 echo
 
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
-export BUILD_TARGET_ARCH=amd64
-if x86_64=i586; then
+
+if [ "x86_64"="i586" ]; then
 export BUILD_TARGET_ARCH=x86
+fi 
+
+if [ "x86_64"="x86_64" ]; then
+export BUILD_TARGET_ARCH=amd64
 fi 
 
 echo " ###DKMS BUILD### "                                                                                                                                                                                          
@@ -106,7 +110,7 @@ module_release=`rpm --qf '%{RELEASE}\n' -q dkms-$module`
 /usr/sbin/dkms -k $kernel_ver -a x86_64 --rpm_safe_upgrade install -m $module -v $module_version-$module_release --force                                                                        
 done                                                                                                                                                                                                               
 echo "END OF IT" 
-/bin/bash
+#/bin/bash
 #
 # kernel
 #

@@ -91,10 +91,13 @@ echo
 echo
 
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
-export BUILD_TARGET_ARCH=amd64
-if #ARCH#=i586; then
+
+#build arch import for vboxadditions dkms###
 export BUILD_TARGET_ARCH=x86
-fi 
+XXX=`file /bin/rpm |grep -c x86-64`                                                                                                                                                                                
+if [ "$XXX" = "1" ];  then  
+export BUILD_TARGET_ARCH=amd64
+fi
 
 echo " ###DKMS BUILD### "                                                                                                                                                                                          
 kernel_ver=`ls /boot | /bin/grep symvers | /bin/sed 's/symvers-//' | sed 's/.gz//'`                                                                                                                                
@@ -124,7 +127,7 @@ echo Generating kernel. System kernel is `uname -r`, installed kernels are:
 rpm -qa kernel-*
 echo Detected kernel version: $KERNEL
 
-/sbin/dracut --add-drivers "sr-mod" /boot/initramfs-$KERNEL.img $KERNEL
+/sbin/dracut --add-drivers "sr-mod xhci-hcd" /boot/initramfs-$KERNEL.img $KERNEL
 ls -l /boot/
 echo ""
 echo "###################################### Build ISO >> "
