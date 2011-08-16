@@ -109,7 +109,7 @@ module_release=`rpm --qf '%{RELEASE}\n' -q dkms-$module`
 /usr/sbin/dkms -k $kernel_ver -a #ARCH# --rpm_safe_upgrade install -m $module -v $module_version-$module_release --force                                                                        
 done                                                                                                                                                                                                               
 echo "END OF IT" 
-/bin/bash
+#/bin/bash
 #
 # kernel
 #
@@ -136,8 +136,9 @@ echo ""
 %post --nochroot
 
     cp -rfT 	#PATH#/extraconfig/etc $INSTALL_ROOT/etc/
-#    cp -rfT     #PATH#/extraconfig/etc/skel $INSTALL_ROOT/home/live/
-#    chown -R live:live $INSTALL_ROOT/home/live/
+    cp -rfT     #PATH#/extraconfig/etc/skel $INSTALL_ROOT/home/live/
+    chown -R live:live $INSTALL_ROOT/home/live/.local
+    chown -R live:live $INSTALL_ROOT/home/live/.fonts.conf
     cp -rfT     #PATH#/.counter $INSTALL_ROOT/etc/isonumber 
 
     cp -f 		#PATH#/root/GPL $LIVE_ROOT/

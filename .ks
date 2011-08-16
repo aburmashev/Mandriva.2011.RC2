@@ -109,7 +109,7 @@ module_release=`rpm --qf '%{RELEASE}\n' -q dkms-$module`
 /usr/sbin/dkms -k $kernel_ver -a x86_64 --rpm_safe_upgrade install -m $module -v $module_version-$module_release --force                                                                        
 done                                                                                                                                                                                                               
 echo "END OF IT" 
-/bin/bash
+#/bin/bash
 #
 # kernel
 #
