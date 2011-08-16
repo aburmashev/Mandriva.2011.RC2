@@ -1414,8 +1414,8 @@ libstdc++6
 psyncclient-devel
 bind-utils
 aumix
-Kollison
-Ksnake
-Kapman
-Knetwalk
-Kmines
+kollison
+ksnake
+kapman
+knetwalk
+kmines
