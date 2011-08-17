@@ -1327,7 +1327,7 @@ iwlwifi-agn-ucode
 #x11-driver-video-nvidia173
 #x11-driver-video-nvidia96xx
 
-improver_client
+#improver_client
 glxinfo
 alsa-utils
 alsa-plugins-pulseaudio
@@ -1414,7 +1414,7 @@ libstdc++6
 psyncclient-devel
 bind-utils
 aumix
-kollison
+kollision
 ksnake
 kapman
 knetwalk
