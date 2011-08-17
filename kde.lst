@@ -408,7 +408,7 @@ krdc
 krfb
 ksendemail
 ksnapshot
-ktimetracker
+#ktimetracker
 kttsd
 kwallet
 kwallet-daemon
