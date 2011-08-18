@@ -1,4 +1,4 @@
-timezone America/Sao_Paulo
+timezone Europe/Moscow
 auth --useshadow --enablemd5
 selinux --disabled
 firewall --enabled
@@ -17,7 +17,7 @@ repo --name=Contrib2       --baseurl=file:///iso/repository/rpm/external/mdv/201
 repo --name=Non-free2        --baseurl=file:///iso/repository/rpm/external/mdv/2011/i586/media/non-free/release/
 
 ##FOR KERNEL3.0
-#repo --name=Kernel-test --baseurl=file:////iso/repository/rpm/external/kernel-3.0/#ARCH#/
+#repo --name=Kernel-test --baseurl=file:////iso/repository/rpm/external/kernel-3.0.1/#ARCH#/
 
 %packages
 %include #PATH#/kde.lst
@@ -137,8 +137,9 @@ echo ""
 
     cp -rfT 	#PATH#/extraconfig/etc $INSTALL_ROOT/etc/
     cp -rfT     #PATH#/extraconfig/etc/skel $INSTALL_ROOT/home/live/
-    chown -R live:live $INSTALL_ROOT/home/live/.local
-    chown -R live:live $INSTALL_ROOT/home/live/.fonts.conf
+#    echo "ASDASD"
+#    /bin/bash
+    chmod -R 0777 $INSTALL_ROOT/home/live/.local
     cp -rfT     #PATH#/.counter $INSTALL_ROOT/etc/isonumber 
 
     cp -f 		#PATH#/root/GPL $LIVE_ROOT/

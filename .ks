@@ -8,16 +8,16 @@ part / --size 8692
 services --enabled=acpid,alsa,atd,avahi-daemon,prefdm,haldaemon,irqbalance,mandi,dbus,netfs,network,network-up,partmon,resolvconf,rpcbind,rsyslog,sound,udev-post,cups,mandrake_everytime,crond
 services --disabled=sshd,pptp,pppoe,ntpd,iptables,ip6tables,shorewall
 
-repo --name=Main       --baseurl=file:///iso/repository/rpm/external/mdv/2011/x86_64/media/main/release/
-repo --name=Contrib       --baseurl=file:///iso/repository/rpm/external/mdv/2011/x86_64/media/contrib/release/                                                                                                     
-repo --name=Non-free        --baseurl=file:///iso/repository/rpm/external/mdv/2011/x86_64/media/non-free/release/  
+repo --name=Main       --baseurl=file:///iso/repository/rpm/external/mdv/2011/i586/media/main/release/
+repo --name=Contrib       --baseurl=file:///iso/repository/rpm/external/mdv/2011/i586/media/contrib/release/                                                                                                     
+repo --name=Non-free        --baseurl=file:///iso/repository/rpm/external/mdv/2011/i586/media/non-free/release/  
 # for 32bit stuff on 64bits arch
 repo --name=Main2       --baseurl=file:///iso/repository/rpm/external/mdv/2011/i586/media/main/release/                                                                                                           
 repo --name=Contrib2       --baseurl=file:///iso/repository/rpm/external/mdv/2011/i586/media/contrib/release/                                                                                                     
 repo --name=Non-free2        --baseurl=file:///iso/repository/rpm/external/mdv/2011/i586/media/non-free/release/
 
 ##FOR KERNEL3.0
-#repo --name=Kernel-test --baseurl=file:////iso/repository/rpm/external/kernel-3.0/x86_64/
+#repo --name=Kernel-test --baseurl=file:////iso/repository/rpm/external/kernel-3.0.1/i586/
 
 %packages
 %include /opt//Mandriva.2011.RC2/kde.lst
@@ -104,9 +104,9 @@ kernel_ver=`ls /boot | /bin/grep symvers | /bin/sed 's/symvers-//' | sed 's/.gz/
 for module in broadcom-wl vboxadditions r8192se; do                                                                                                                              
 module_version=`rpm --qf '%{VERSION}\n' -q dkms-$module`                                                                                                                                                           
 module_release=`rpm --qf '%{RELEASE}\n' -q dkms-$module`                                                                                                                                                           
-/usr/sbin/dkms -k $kernel_ver -a x86_64 --rpm_safe_upgrade add -m $module -v $module_version-$module_release
-/usr/sbin/dkms -k $kernel_ver -a x86_64 --rpm_safe_upgrade build -m $module -v $module_version-$module_release                                                                                  
-/usr/sbin/dkms -k $kernel_ver -a x86_64 --rpm_safe_upgrade install -m $module -v $module_version-$module_release --force                                                                        
+/usr/sbin/dkms -k $kernel_ver -a i586 --rpm_safe_upgrade add -m $module -v $module_version-$module_release
+/usr/sbin/dkms -k $kernel_ver -a i586 --rpm_safe_upgrade build -m $module -v $module_version-$module_release                                                                                  
+/usr/sbin/dkms -k $kernel_ver -a i586 --rpm_safe_upgrade install -m $module -v $module_version-$module_release --force                                                                        
 done                                                                                                                                                                                                               
 echo "END OF IT" 
 #/bin/bash
@@ -137,6 +137,8 @@ echo ""
 
     cp -rfT 	/opt//Mandriva.2011.RC2/extraconfig/etc $INSTALL_ROOT/etc/
     cp -rfT     /opt//Mandriva.2011.RC2/extraconfig/etc/skel $INSTALL_ROOT/home/live/
+    echo "ASDASD"
+    /bin/bash
     chown -R live:live $INSTALL_ROOT/home/live/.local
     chown -R live:live $INSTALL_ROOT/home/live/.fonts.conf
     cp -rfT     /opt//Mandriva.2011.RC2/.counter $INSTALL_ROOT/etc/isonumber 

@@ -1377,7 +1377,7 @@ btrfs-progs
 knetworkmanager-pptp                                                                                                                                                                                               
 #xsane                                                                                                                                                                                                              
 #task-scanning                                                                                                                                                                                                      
-dkms-broadcom-wl                                                                                                                                                                                                   
+#dkms-broadcom-wl                                                                                                                                                                                                   
 samba-client                                                                                                                                                                                                       
 cifs-utils                                                                                                                                                                                                         
 nss_wins                                                                                                                                                                                                           
@@ -1419,3 +1419,4 @@ ksnake
 kapman
 knetwalk
 kmines
+kamera
