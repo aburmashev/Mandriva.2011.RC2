@@ -28,7 +28,7 @@ b43-fwcutter
 basesystem
 basesystem-minimal
 bash
-bluez
+#bluez
 bootloader-utils
 bootsplash
 busybox-static
@@ -1274,7 +1274,7 @@ elementary-theme
 rosa-icons
 
 atmel-firmware
-bluez-firmware
+#bluez-firmware
 initrd-firmware
 ipw2100-firmware
 ipw2200-firmware
