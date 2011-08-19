@@ -6,7 +6,7 @@ firstboot --enabled
 part / --size 8692
 
 services --enabled=acpid,alsa,atd,avahi-daemon,prefdm,haldaemon,irqbalance,mandi,dbus,netfs,network,network-up,partmon,resolvconf,rpcbind,rsyslog,sound,udev-post,cups,mandrake_everytime,crond
-services --disabled=sshd,pptp,pppoe,ntpd,iptables,ip6tables,shorewall
+services --disabled=sshd,pptp,pppoe,ntpd,iptables,ip6tables,shorewall,nfs-server,network,network-up
 
 repo --name=Main       --baseurl=file:///iso/repository/rpm/external/mdv/2011/x86_64/media/main/release/
 repo --name=Contrib       --baseurl=file:///iso/repository/rpm/external/mdv/2011/x86_64/media/contrib/release/                                                                                                     
@@ -17,7 +17,7 @@ repo --name=Contrib2       --baseurl=file:///iso/repository/rpm/external/mdv/201
 repo --name=Non-free2        --baseurl=file:///iso/repository/rpm/external/mdv/2011/i586/media/non-free/release/
 
 ##FOR KERNEL3.0
-#repo --name=Kernel-test --baseurl=file:////iso/repository/rpm/external/kernel-3.0.1/x86_64/
+#repo --name=Kernel-test --baseurl=file:///iso/repository/rpm/external/TEST/x86_64/
 
 %packages
 %include /opt//Mandriva.2011.RC2/kde.lst
