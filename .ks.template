@@ -17,7 +17,7 @@ repo --name=Contrib2       --baseurl=file:///iso/repository/rpm/external/mdv/201
 repo --name=Non-free2        --baseurl=file:///iso/repository/rpm/external/mdv/2011/i586/media/non-free/release/
 
 ##FOR KERNEL3.0
-#repo --name=Kernel-test --baseurl=file:///iso/repository/rpm/external/TEST/#ARCH#/
+#repo --name=Kernel-test --baseurl=file:///iso/repository/rpm/external/kernel-no-IDE/#ARCH#/
 
 %packages
 %include #PATH#/kde.lst
@@ -147,5 +147,6 @@ echo ""
     cp 	  		/usr/bin/livecd-iso-to-disk			$LIVE_ROOT/Addons/
     chmod +x 	$LIVE_ROOT/Addons/livecd-iso-to-disk
     rpm --root $INSTALL_ROOT -qa | sort > $LIVE_ROOT/rpm.lst
+    ./total_sum_counter.pl -r 640 -h 10 -w $INSTALL_ROOT/ -o $INSTALL_ROOT/etc/minsysreqs
 
 %end

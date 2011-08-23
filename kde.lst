@@ -6,6 +6,8 @@ harddrake
 mc
 kernel-desktop-latest
 kernel-desktop-devel-latest
+#kernel-desktop
+#kernel-desktop-devel
 dracut
 
 acl
@@ -454,10 +456,13 @@ mandriva-kde-icons
 mandriva-kde4-config-common
 mandriva-kde-translation
 mandriva-release-common
-mandriva-release-Free
+#mandriva-release-Free
+mandriva-release-One
 mandriva-theme-common
-mandriva-theme-Free
-mandriva-theme-Free-screensaver
+#mandriva-theme-Free
+#mandriva-theme-Free-screensaver
+mandriva-theme-One
+mandriva-theme-One-screensaver
 man-pages
 mdadm
 mdkonline
@@ -522,7 +527,8 @@ ntp
 ntp-client
 obex-data-server
 okular
-free-kde4-config
+#free-kde4-config
+one-kde4-config
 open
 openldap
 libreoffice-calc
@@ -1272,7 +1278,7 @@ ktorrent
 kde4-windeco-dekorator
 elementary-theme
 rosa-icons
-
+kamera
 atmel-firmware
 #bluez-firmware
 initrd-firmware
