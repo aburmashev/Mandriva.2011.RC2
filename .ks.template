@@ -1,4 +1,4 @@
-timezone Europe/Moscow
+timezone Europe/Paris
 auth --useshadow --enablemd5
 selinux --disabled
 firewall --enabled
@@ -6,7 +6,7 @@ firstboot --enabled
 part / --size 8692
 
 services --enabled=acpid,alsa,atd,avahi-daemon,prefdm,haldaemon,irqbalance,mandi,dbus,netfs,network,network-up,partmon,resolvconf,rpcbind,rsyslog,sound,udev-post,cups,mandrake_everytime,crond
-services --disabled=sshd,pptp,pppoe,ntpd,iptables,ip6tables,shorewall,nfs-server,network,network-up,mysql,samba
+services --disabled=sshd,pptp,pppoe,ntpd,iptables,ip6tables,shorewall,nfs-server,network,network-up,mysql,samba,abrtd
 
 repo --name=Main       --baseurl=file:///iso/repository/rpm/external/mdv/2011/#ARCH#/media/main/release/
 repo --name=Contrib       --baseurl=file:///iso/repository/rpm/external/mdv/2011/#ARCH#/media/contrib/release/                                                                                                     
@@ -62,7 +62,7 @@ fi
 pushd /etc/sysconfig/network-scripts
 for iface in eth0 wlan0; do
 	cat > ifcfg-$iface << EOF
-DEVICE=eth0
+DEVICE=$iface
 ONBOOT=yes
 NM_CONTROLLED=yes
 EOF

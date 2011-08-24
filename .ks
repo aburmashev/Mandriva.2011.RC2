@@ -6,7 +6,7 @@ firstboot --enabled
 part / --size 8692
 
 services --enabled=acpid,alsa,atd,avahi-daemon,prefdm,haldaemon,irqbalance,mandi,dbus,netfs,network,network-up,partmon,resolvconf,rpcbind,rsyslog,sound,udev-post,cups,mandrake_everytime,crond
-services --disabled=sshd,pptp,pppoe,ntpd,iptables,ip6tables,shorewall,nfs-server,network,network-up,mysql,samba
+services --disabled=sshd,pptp,pppoe,ntpd,iptables,ip6tables,shorewall,nfs-server,network,network-up,mysql,samba,abrtd
 
 repo --name=Main       --baseurl=file:///iso/repository/rpm/external/mdv/2011/x86_64/media/main/release/
 repo --name=Contrib       --baseurl=file:///iso/repository/rpm/external/mdv/2011/x86_64/media/contrib/release/                                                                                                     
@@ -147,5 +147,6 @@ echo ""
     cp 	  		/usr/bin/livecd-iso-to-disk			$LIVE_ROOT/Addons/
     chmod +x 	$LIVE_ROOT/Addons/livecd-iso-to-disk
     rpm --root $INSTALL_ROOT -qa | sort > $LIVE_ROOT/rpm.lst
+    ./total_sum_counter.pl -r 640 -h 10 -w $INSTALL_ROOT/ -o $INSTALL_ROOT/etc/minsysreqs
 
 %end

@@ -5,3 +5,4 @@ authentication=no
 FINISH_INSTALL=yes
 USERS=with_root
 remove_unused_packages=no
+urpmi=no
